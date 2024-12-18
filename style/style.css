@@ -1,0 +1,200 @@
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 100%;
+}
+
+
+header {
+    height: 100vh;
+    background-color: rgb(211,211,211);
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2rem;
+    position: relative;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+.logo img{
+    width: 50%;
+    height: 50%;
+}
+
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    padding: 0 1.25rem;
+    margin-right: 2.5rem;
+}
+
+.navbar li {
+    display: inline;
+    flex: 1;
+    text-align: left; /* Décale les éléments vers la gauche */
+}
+
+.navbar a {
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem; /* Augmente le padding gauche */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #007BFF;
+}
+
+
+.img-middle {
+    max-width: 80%;
+    height: 50%;
+    border-radius: 8%;
+    object-fit: cover;
+    border: 0.0625rem solid grey;
+}
+
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+}
+
+
+.go-bottom {
+    position: absolute;
+    bottom: 3.25%;
+    text-align: center;
+    width: auto;
+    padding: 0.625rem;
+    margin: 0 auto;
+    background-color: rgba(128, 128, 128, 0.9);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.9375rem;
+    border: 0.0625rem solid grey;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button img {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+
+section {
+    padding: 1.25rem;
+    position: relative;
+    height: auto;
+}
+
+.Informations, .Projets, .contact {
+    position: relative;
+    background-color: white;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Aligne les éléments au centre verticalement */
+    text-align: center;
+    padding: 0; /* Ajustez le padding si nécessaire */
+    min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+
+.Informations .go-bottom, 
+.Projets .go-bottom, 
+.contact .go-bottom {
+    bottom: 0%;
+}
+
+.Informations p{
+    margin-bottom: 1em;
+    margin-top: 3em;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+
+footer {
+    text-align: center;
+    padding: 0.625rem;
+}
+
+
+@media (max-width: 48rem) {
+    .text-overlay {
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar a {
+        font-size: 0.875rem;
+    }
+
+    .go-bottom {
+        padding: 0.3125rem;
+    }
+
+    button img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .text-overlay {
+        font-size: 1rem;
+    }
+
+    .navbar a {
+        font-size: 0.75rem;
+        padding: 0.3125rem;
+    }
+}
