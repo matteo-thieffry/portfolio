@@ -14,6 +14,7 @@
             <a class="logo" href="#menu"><img src="img/logo2.png" alt="Image centrée"></a>
             <ul>
                 <li><a href="#Informations">Informations</a></li>
+                <li><a href="#competences">Compétences</a></li>
                 <li><a href="#Projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="https://drive.google.com/file/d/1bspautvoN-3db_6N3HiZEMkUBeot19P6/view?usp=drive_link">CV</a></li>
@@ -25,17 +26,58 @@
             <button onclick="location.href='#Informations'"><img src="img/fleche_bas-removebg-preview.png"></button>
         </div>
     </header>
-
     <section class="Informations" id="Informations">
         <h2>Informations</h2>
-        <p>Bonjour, je m'appelle Mattéo Thieffry et je suis actuellement en deuxième année de BUT Informatique à Villeneuve d'Ascq. Passionné par le développement web, je me spécialise dans le front-end, où je m'efforce de créer des interfaces à la fois esthétiques et fonctionnelles. Mon parcours m'a permis de développer des compétences solides en HTML, CSS et JavaScript, et j'ai eu l'opportunité de réaliser un projet web dans le cadre de mes études, où j'ai pu mettre en pratique mes connaissances et travailler en équipe.</p>
-        <p>Autonome et autodidacte, j'aime relever de nouveaux défis et apprendre par moi-même. En dehors de mes études, je travaille comme animateur pendant les vacances, ce qui m'a permis de développer des compétences en communication et en gestion de groupe. Cette expérience enrichissante m'a également appris l'importance du travail d'équipe et de la créativité, des qualités que je souhaite transposer dans le domaine du développement web.</p>
-        <p>À travers ce portfolio, je souhaite partager mes réalisations et ma vision du web. Je suis enthousiaste à l'idée de continuer à apprendre et à évoluer dans ce secteur en constante évolution.</p>
+        <p>Bonjour, je m'appelle Mattéo Thieffry, j'ai 20 ans et je suis actuellement en deuxième année de BUT Informatique à Villeneuve d'Ascq. Mon parcours académique a travers mon année de License SESI et mes année au BUT Informatique m'on permis d'acquérir des compétences techniques dans des domaines variés tels que le développement logiciel, la gestion de bases de données et le développement web dans lequel je veux me spécialisé. </p>
+        <section id="langues" class="section">
+            <h3>Langues</h3>
+            <img src="img/france.png" style="max-width: 250px; margin: 15px;">
+            <img src="img/anglais.png" style="margin: 15px;">
+        </section>
+        <div class="go-bottom">
+            <button onclick="location.href='#competences'"><img src="img/fleche_bas-removebg-preview.png"></button>
+        </div>
+    </section>
+    <section class="competences" id="competences" >
+        <h2>Compétences</h2>
+        <div class="competences-grid">
+            <div class="competence-card">
+                <h3>Programmation</h3>
+                <p>Java</p>
+                <p>Python</p>
+                <p>JavaScript</p>
+                <p>C</p>
+                <p>Langages Objets</p>
+            </div>
+            <div class="competence-card">
+                <h3>Web</h3>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>WordPress</p>
+                <p>JavaScript</p>
+            </div>
+            <div class="competence-card">
+                <h3>BDD</h3>
+                <p>SQL</p>
+                <p>PostgresQl</p>
+                <p>Access</p>
+            </div>
+            <div class="competence-card">
+                <h3>Collaboration</h3>
+                <p>Communication</p>
+                <p>Esprit d'équipe</p>
+            </div>
+            <div class="competence-card">
+                <h3>Autre</h3>
+                <p>Gestion de version (GIT)</p>
+                <p>Figma</p>
+                <p>Commandes UNIX</p>
+            </div>
+        </div>
         <div class="go-bottom">
             <button onclick="location.href='#Projets'"><img src="img/fleche_bas-removebg-preview.png"></button>
         </div>
-    </section>
-        
+    </section>    
     <section class="Projets" id="Projets">
         <h2>Mes Projets</h2>
         <div class="carousel">
@@ -68,7 +110,6 @@
             <div class="carousel-controls">
                 <button id="prev">‹</button>
                 <button id="next" style="position: absolute; top: 50%; right: 20px; z-index: 10;">›</button>
-
             </div>
         </div>
         <div class="go-bottom">
