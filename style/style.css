@@ -247,6 +247,7 @@ footer {
     border-radius: 8px;
     object-fit: cover;
     max-width: 200px;
+    cursor: pointer;
 }
 
 .carousel-item h3 {
