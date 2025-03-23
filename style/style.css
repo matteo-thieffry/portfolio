@@ -1,3 +1,4 @@
+
 body {
     height: 100%;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     line-height: 1.6;
     font-size: 100%;
 }
+
 
 header {
     height: 100vh;
@@ -21,6 +23,7 @@ header {
     padding-top: 2rem;
     position: relative;
 }
+
 
 .navbar {
     position: fixed;
@@ -38,10 +41,9 @@ header {
     flex-wrap: wrap;
 }
 
-.logo img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+.logo img{
+    width: 50%;
+    height: 50%;
 }
 
 .navbar ul {
@@ -73,17 +75,20 @@ header {
     background-color: #0056b3;
 }
 
+
 .navbar a {
     color: white;
     font-size: 1rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.5rem; /* Augmente le padding gauche */
     text-decoration: none;
     transition: color 0.3s;
+
 }
 
 .navbar a:hover {
     color: #007BFF;
 }
+
 
 .img-middle {
     max-width: 80%;
@@ -92,6 +97,7 @@ header {
     object-fit: cover;
     border: 0.0625rem solid grey;
 }
+
 
 .text-overlay {
     position: absolute;
@@ -103,6 +109,7 @@ header {
     padding: 0.625rem 1.25rem;
     border-radius: 0.625rem;
 }
+
 
 .go-bottom {
     position: absolute;
@@ -128,6 +135,8 @@ button img {
     height: 3.125rem;
 }
 
+
+
 section {
     padding: 1.25rem;
     position: relative;
@@ -151,23 +160,27 @@ section {
     min-height: 100vh;
 }
 
+
+
 .Informations .go-bottom, 
 .Projets .go-bottom, 
 .contact .go-bottom {
     bottom: 0%;
 }
 
-.Informations p {
+.Informations p{
     margin-bottom: 1em;
     margin-top: 3em;
     margin-left: 15em;
     margin-right: 15em;
 }
 
+
 footer {
     text-align: center;
     padding: 0.625rem;
 }
+
 
 @media (max-width: 48rem) {
     .text-overlay {
@@ -204,32 +217,35 @@ footer {
     }
 }
 
-.carousel {
-    position: relative;
-    overflow: hidden;
+.logo img {
+    max-width: 100%; /* Limite la largeur de l'image à celle du conteneur */
+    height: auto;    /* Maintient les proportions de l'image */
+    object-fit: contain; /* S'assure que l'image est entièrement visible dans son conteneur */
 }
 
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+@media (max-width: 48rem) {
+    .logo img {
+        max-width: 70%; /* Réduit la taille de l'image pour les écrans moyens */
+    }
+}
+
+@media (max-width: 30rem) {
+    .logo img {
+        max-width: 50%; /* Réduit davantage la taille pour les petits écrans */
+    }
 }
 
 .carousel-item {
-    flex: 0 0 auto;
-    width: 33.33%;
+    flex: 0 0 auto; /* Éviter que les éléments s'étendent */
+    width: 33.33%; /* Chaque élément prend 1/3 de la largeur du carrousel */
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
 .carousel-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     border-radius: 8px;
+    object-fit: cover;
     max-width: 200px;
     cursor: pointer;
 }
@@ -260,17 +276,28 @@ footer {
     background-color: #0056b3;
 }
 
-/* Responsivité */
+/* Responsivité - Réduire le nombre d'éléments visibles sur les petits écrans */
 @media (max-width: 768px) {
     .carousel-item {
-        width: 50%; /* 2 éléments visibles */
+        width: 50%; /* Affiche 2 éléments à la fois */
     }
 }
 
 @media (max-width: 480px) {
     .carousel-item {
-        width: 100%; /* 1 élément visible */
+        width: 100%; /* Affiche 1 élément à la fois */
     }
+}
+
+
+.carousel {
+    position: relative;
+    overflow: hidden;  /* Assurez-vous que les éléments qui sortent du carrousel sont masqués */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-controls {
@@ -291,23 +318,26 @@ footer {
     font-size: 2rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-radius: 50%;
     z-index: 10;
+    flex-wrap: wrap;
+    position: fixed;
+    border-radius: 33%;
 }
 
 .modal {
-    display: none;
+    display: none;  /* Masqué par défaut */
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);  /* Fond semi-transparent */
     justify-content: center;
     align-items: center;
 }
 
+/* Contenu de la modale */
 .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -318,7 +348,8 @@ footer {
     position: relative;
 }
 
-.close {
+/* Bouton de fermeture de la modale */
+.close{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -329,11 +360,12 @@ footer {
     border: none;
 }
 
+/* Style pour les images dans le carrousel */
 .carousel-img {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
 .carousel-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);  /* Effet de zoom au survol */
 }
